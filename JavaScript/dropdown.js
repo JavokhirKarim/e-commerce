@@ -16,7 +16,7 @@ var gridItems = document.querySelectorAll(".grid-itemm");
 
 gridItems.forEach(function (item) {
   item.addEventListener("click", function () {
-    // Remove active class from all grid items
+    // Remove active class from all grid item
     gridItems.forEach(function (gridItem) {
       gridItem.classList.remove("active");
     });
