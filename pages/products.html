@@ -18,54 +18,9 @@
     <link rel="stylesheet" href="../css/all-products.min.css" />
   </head>
   <body>
-    <!-- CHAT USER  -->
-    <div id="myButton" class="chat">
-      <a class="telegram" href="../pages/about-us.html"
-        ><img
-          width="60"
-          height="60"
-          src="../assets/images/Home/chat-user/whatssapp.svg"
-          alt=""
-      /></a>
-      <a class="whatsapp" href="#"
-        ><img
-          width="60"
-          height="60"
-          src="../assets/images/Home/chat-user/telegram.svg"
-          alt="Chat user"
-      /></a>
-      <img
-        class="message"
-        width="60"
-        height="60"
-        src="../assets/images/contact/logo.svg"
-        alt=""
-      />
-      <img
-        class="messeage_close"
-        width="55"
-        height="55"
-        src="../assets/images/Home/chat-user/close.png"
-        alt=""
-      />
-      <p class="write">Hапишите нам</p>
-      <p class="join">Подписаться</p>
-    </div>
-    <!-- CHAT USER  -->
-
     <button id="btnGiveCommand">
       <img src="../assets/images/Home/mikrafhone.png" alt="" />
     </button>
-
-    <!-- DarkMode checkbox -->
-    <div class="container">
-      <div onclick="darkMode()" class="check_box">
-        <label
-          ><input value="on" name="dummy" type="checkbox" class="bubble"
-        /></label>
-      </div>
-    </div>
-    <!-- DarkMode checkbox -->
 
     <header class="header dark-header">
       <div id="modal" class="wrapper-modal">
@@ -392,7 +347,10 @@
         <div class="footer_navbar_fixed">
           <ul class="footer_nav_list">
             <li>
-              <a onclick="toggleDropdown()" class="red_hover" href="category.html"
+              <a
+                onclick="toggleDropdown()"
+                class="red_hover"
+                href="category.html"
                 ><img
                   src="../assets/images/Home/menu-dark.svg"
                   alt="menu"
@@ -439,15 +397,12 @@
       <li><a class="active" href="#">Все продукты</a></li>
     </ul>
 
-
     <div class="container">
       <h2 class="all">Все продукты</h2>
     </div>
 
     <div class="container">
-      <div id="allproducts" class="card-content products__row">
-        
-      </div>
+      <div id="allproducts" class="card-content products__row"></div>
       <div id="pagination-container"></div>
     </div>
 
@@ -510,21 +465,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/js/intlTelInput.js"></script>
 
-
-
-
-
     <script src="../JavaScript/auth.js"></script>
     <script src="../JavaScript/dropdown.js"></script>
     <script src="../JavaScript/chat-user.js"></script>
     <script src="../JavaScript/dark-mode.js"></script>
-    
+
     <script src="../javascript/const.js"></script>
     <script src="../JavaScript/products-data.js"></script>
     <script src="../javascript/utils.js"></script>
     <script src="../javascript/main.js"></script>
-
-    
 
     <script src="../JavaScript/products.js"></script>
     <script src="../JavaScript/product-search.js"></script>
@@ -568,26 +517,24 @@
       }, 250);
     </script>
 
-<script>
-  const items = $("#allproducts .card");
-  const numItems = items.length;
-  const perPage = 8;
+    <script>
+      const items = $("#allproducts .card");
+      const numItems = items.length;
+      const perPage = 8;
 
-  items.slice(perPage).hide();
+      items.slice(perPage).hide();
 
-  $("#pagination-container").pagination({
-    items: numItems,
-    itemsOnPage: perPage,
-    prevText: "&laquo;",
-    nextText: "&raquo;",
-    onPageClick: function (pageNumber) {
-      var showFrom = perPage * (pageNumber - 1);
-      var showTo = showFrom + perPage;
-      items.hide().slice(showFrom, showTo).show();
-    },
-  });
-</script>
-
-
+      $("#pagination-container").pagination({
+        items: numItems,
+        itemsOnPage: perPage,
+        prevText: "&laquo;",
+        nextText: "&raquo;",
+        onPageClick: function (pageNumber) {
+          var showFrom = perPage * (pageNumber - 1);
+          var showTo = showFrom + perPage;
+          items.hide().slice(showFrom, showTo).show();
+        },
+      });
+    </script>
   </body>
 </html>

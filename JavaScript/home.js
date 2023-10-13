@@ -99,7 +99,7 @@ function getDiscountProducts(item) {
                     class="value-button increase-button" 
                     onclick="increaseLatest(${id})"
                   >+</button></div>`
-                    : `<button class = "add-to-cart-button btn_main" data-product-id="${id}" >В корзину
+                    : `<button class = "add-to-cart-button btn_main" data-product-id="${id}" onclick = "addToCartLatest(${id})">В корзину
          
                   </button>`
                 }
@@ -175,7 +175,7 @@ function getProductCard(item) {
                     onclick="increaseLatest(${id})"
                   >+</button>
                   </div>`
-                     : `<button class = "add-to-cart-button btn_main" data-product-id="${id}"  >В корзину
+                     : `<button class = "add-to-cart-button btn_main" data-product-id="${id}" onclick = "addToCartLatest(${id})" >В корзину
                   
                       </button>`
                  }
@@ -281,7 +281,7 @@ function getHighRatedProducts(item) {
                     class="value-button increase-button" 
                     onclick="increaseLatest(${id})"
                   >+</button></div>`
-                    : `<button class = "add-to-cart-button btn_main" data-product-id="${id}" >В корзину
+                    : `<button class = "add-to-cart-button btn_main" data-product-id="${id}" onclick = "addToCartLatest(${id})">В корзину
               
                   </button>`
                 }
