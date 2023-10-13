@@ -1,6 +1,5 @@
 const searchInput = document.getElementById("searchInput");
 const searchResult = document.querySelector(".search_result");
-// const searchCount = document.querySelector(".count");
 let search = "";
 
 searchInput.addEventListener("keyup", function () {
